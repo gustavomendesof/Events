@@ -1,8 +1,8 @@
-package app;
+package View;
 
 import java.util.Scanner;
 
-public class CadastrarUsuario {
+public class RegisterUser {
     Scanner sc = new Scanner(System.in);
 
     private String user;

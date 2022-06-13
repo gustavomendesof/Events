@@ -1,6 +1,6 @@
-package app;
+package View;
 
-public class EventsLecture extends CadastrarEvents{
+public class EventsLecture extends RegisterEvents {
 
     private String nameSpeaker;
 

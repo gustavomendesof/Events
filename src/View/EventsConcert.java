@@ -1,6 +1,6 @@
-package app;
+package View;
 
-public class EventsConcert extends CadastrarEvents{
+public class EventsConcert extends RegisterEvents {
     private String Singer;
 
     public String getSinger() {

@@ -1,4 +1,4 @@
-package app;
+package View;
 
 import java.util.Scanner;
 
@@ -7,17 +7,23 @@ public class Menu {
 
     int opcao = 0;
 
-    CadastrarUsuario registeruser = new CadastrarUsuario();
+    RegisterUser registeruser = new RegisterUser();
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventswedding = new EventsWedding();
     EventsLecture eventsLecture = new EventsLecture();
     PresentList presentList = new PresentList();
+    Notification notification = new Notification();
 
 
     public void menuOpcao() {
 
         do{
+
             System.out.println("Bem vindo ao sistema de eventos");
+            System.out.println("Evento Marcado para os proximos dias");
+            notification.notificationEvents();
+
+            System.out.println("Menu");
             System.out.println("1 - Cadastrar");
             System.out.println("2 - Cadastrar evento");
             opcao = sc.nextInt();
@@ -44,7 +50,6 @@ public class Menu {
                         }
                     }while (optionEvent != 0);
                 case 3:
-
                     break;
                 default:
                     System.out.println("Numero errado");

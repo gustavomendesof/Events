@@ -1,4 +1,4 @@
-package app;
+package View;
 
 public class Main {
 

@@ -1,6 +1,6 @@
-package app;
+package View;
 
-public class EventsWedding extends CadastrarEvents{
+public class EventsWedding extends RegisterEvents {
     private String nameFiancee, nameEngaged, nameChurch, placeChurch;
 
     public String getNameFiancee() {

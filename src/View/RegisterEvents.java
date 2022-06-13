@@ -1,8 +1,8 @@
-package app;
+package View;
 
 import java.util.Scanner;
 
-public class CadastrarEvents {
+public abstract class RegisterEvents {
     Scanner sc = new Scanner(System.in);
 
     private String nameEvent, placeEvent, info;
