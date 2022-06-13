@@ -40,7 +40,7 @@ public class EventsLecture extends CadastrarEvents{
         return "Palestra: " + getNameEvent()
                 +"\nPalestrante: " + getNameSpeaker()
                 +"\nAssunto da Palestra: " + getInfo()
-                +"\nLocal da Palestra: " + getPlaceEvent()
+                +"\nLocal da Palestra: " +getPlaceEvent()
                 +"\nComeça as: " + getStartTime()
                 +"\nTermina as:" + getFinalTime()
                 +"\n Capacidade: " + getCapacity();

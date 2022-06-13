@@ -10,7 +10,7 @@ public class Menu {
     CadastrarUsuario registeruser = new CadastrarUsuario();
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventswedding = new EventsWedding();
-    EventsLecture eventsLecture = new EventsLecture();
+    EventsLecture eventsLecture = new EventsLectureConstructor();
 
 
     public void menuOpcao() {
@@ -38,7 +38,6 @@ public class Menu {
                             eventswedding.RegisterEventsWedding();
                         } else if (optionEvent == 3){
                             eventsLecture.RegisterEventsLecture();
-                            eventsLecture.toString();
                         }else{
                             System.out.println("Digite uma opção valida");
                         }
