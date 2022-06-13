@@ -11,7 +11,7 @@ public class Menu {
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventswedding = new EventsWedding();
     EventsLecture eventsLecture = new EventsLecture();
-    Presencalista presencalista = new Presencalista();
+    PresentList presentList = new PresentList();
 
 
     public void menuOpcao() {
