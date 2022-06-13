@@ -10,7 +10,7 @@ public class Menu {
     CadastrarUsuario registeruser = new CadastrarUsuario();
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventswedding = new EventsWedding();
-    EventsLecture eventsLecture = new EventsLectureConstructor();
+    EventsLecture eventsLecture = new EventsLecture();
 
 
     public void menuOpcao() {
