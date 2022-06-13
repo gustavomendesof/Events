@@ -11,6 +11,7 @@ public class Menu {
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventswedding = new EventsWedding();
     EventsLecture eventsLecture = new EventsLecture();
+    Presencalista presencalista = new Presencalista();
 
 
     public void menuOpcao() {
@@ -43,6 +44,7 @@ public class Menu {
                         }
                     }while (optionEvent != 0);
                 case 3:
+
                     break;
                 default:
                     System.out.println("Numero errado");
