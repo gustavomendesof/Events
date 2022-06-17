@@ -30,6 +30,7 @@ public class Menu {
             switch (opcao) {
                 case 1:
                     registeruser.CadastrarUser();
+                    registeruser.RegisterSuccess();
                     break;
                 case 2:
                     int optionEvent;

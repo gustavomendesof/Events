@@ -56,5 +56,11 @@ public class RegisterUser {
         setCpf(sc.nextInt());
     }
 
-
+    public void RegisterSuccess(){
+        System.out.println("Evento Registrado com sucesso"
+                +"\n Nome de usuario: " + getUser()
+                +"\n Senha: " + getPassword()
+                +"\n Telefone: " + getPhone()
+                +"\n Cpf: " + getCpf());
+    }
 }
