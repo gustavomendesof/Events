@@ -32,5 +32,15 @@ public class EventsConcert extends RegisterEvents {
 
     }
 
+    public void RegisterSuccess(){
+        System.out.println("Evento Registrado com sucesso"
+                +"Palestra: " + getNameEvent()
+                +"\nLocal do show: " + getPlaceEvent()
+                +"\nCantor: " + getSinger()
+                +"\nCapacidade: " + getCapacity()
+                +"\nComeça as: " + getStartTime()
+                +"\nTermina as:" + getFinalTime());
+    }
+
 
 }

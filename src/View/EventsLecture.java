@@ -35,14 +35,15 @@ public class EventsLecture extends RegisterEvents {
         setFinalTime(sc.nextDouble());
     }
 
-    @Override
-    public String toString() {
-        return "Palestra: " + getNameEvent()
+
+    public void RegisterSuccess(){
+        System.out.println("Evento Registrado com sucesso"
+                +"Palestra: " + getNameEvent()
                 +"\nPalestrante: " + getNameSpeaker()
                 +"\nAssunto da Palestra: " + getInfo()
-                +"\nLocal da Palestra: " +getPlaceEvent()
+                +"\nLocal da Palestra: " + getPlaceEvent()
                 +"\nComeça as: " + getStartTime()
                 +"\nTermina as:" + getFinalTime()
-                +"\n Capacidade: " + getCapacity();
+                +"\nCapacidade: " + getCapacity());
     }
 }

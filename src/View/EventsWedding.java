@@ -64,4 +64,18 @@ public class EventsWedding extends RegisterEvents {
         setFinalTime(sc.nextDouble());
 
     }
+
+    public void RegisterSuccess(){
+        System.out.println("Evento Registrado com sucesso"
+                +"Nome do evento: " + getNameEvent()
+                +"\nNome da igreja: " +  getNameChurch()
+                +"\nLocal da igreja: " + getPlaceChurch()
+                +"\nNome da noiva: " + getNameFiancee()
+                +"\nNome do noivo: " + getNameEngaged()
+                +"\nLocal da Festa: " + getPlaceEvent()
+                +"\nCapacidade: " + getCapacity()
+                +"\nTermina as:" + getFinalTime()
+                +"\nCapacidade: " + getCapacity());
+
+    }
 }

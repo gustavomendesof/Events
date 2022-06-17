@@ -20,7 +20,7 @@ public class Menu {
         do{
 
             System.out.println("Bem vindo ao sistema de eventos");
-            System.out.println("Evento Marcado para os proximos dias");
+            System.out.println("Evento Marcado para os proximos dias:");
             notification.notificationEvents();
 
             System.out.println("Menu");
@@ -38,17 +38,22 @@ public class Menu {
                         System.out.println("1 - Shows");
                         System.out.println("2 - Casamentos");
                         System.out.println("3 - Palestras");
+                        System.out.println("0 - Voltar");
                         optionEvent = sc.nextInt();
                         if (optionEvent == 1) {
                             eventsConcert.RegisterEventsConcert();
+                            eventsConcert.RegisterSuccess();
                         } else if (optionEvent == 2) {
                             eventswedding.RegisterEventsWedding();
+                            eventswedding.RegisterSuccess();
                         } else if (optionEvent == 3){
                             eventsLecture.RegisterEventsLecture();
+                            eventsLecture.RegisterSuccess();
                         }else{
                             System.out.println("Digite uma opção valida");
                         }
                     }while (optionEvent != 0);
+
                 case 3:
                     break;
                 default:

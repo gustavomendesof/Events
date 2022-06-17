@@ -8,6 +8,7 @@ public class RegisterUser {
     private String user;
     private int password, phone, cpf;
 
+
     public String getUser() {
         return user;
     }

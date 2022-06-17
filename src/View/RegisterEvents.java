@@ -5,6 +5,7 @@ import java.util.Scanner;
 public abstract class RegisterEvents {
     Scanner sc = new Scanner(System.in);
 
+
     private String nameEvent, placeEvent, info;
     private double startTime, finalTime;
     private int capacity;
@@ -56,5 +57,6 @@ public abstract class RegisterEvents {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+
 
 }
