@@ -20,25 +20,26 @@ public class EventsLecture extends RegisterEvents {
 
     public void RegisterEventsLecture() {
         System.out.println("Digite o nome da Palestra:");
-        setNameEvent(sc.next());
+        setNameEvent(sc.nextLine());
 
         System.out.println("Digite o local da Palestra:");
-        setPlaceEvent(sc.next());
+        setPlaceEvent(sc.nextLine());
 
         System.out.println("Digite o nome do Palestrante:");
-        setNameSpeaker(sc.next());
+        setNameSpeaker(sc.nextLine());
 
         System.out.println("Digite o assunto da palestra:");
-        setInfo(sc.next());
+        setInfo(sc.nextLine());
+
+        System.out.println("Digite o horario de inicio da palestra:");
+        setStartTime(sc.nextLine());
+
+        System.out.println("Digite o horario final da palestra:");
+        setFinalTime(sc.nextLine());
 
         System.out.println("Digite a capacidade de pessoas:");
         setCapacity(sc.nextInt());
 
-        System.out.println("Digite o horario de inicio da palestra:");
-        setStartTime(sc.next());
-
-        System.out.println("Digite o horario final da palestra:");
-        setFinalTime(sc.next());
     }
 
     @Override
@@ -51,4 +52,17 @@ public class EventsLecture extends RegisterEvents {
                 +"| Termina as:" + getFinalTime()
                 +"| Capacidade: " + getCapacity();
     }
+
+    public void RegisterSuccess(){
+        System.out.println("Evento Registrado com sucesso"
+                +"\nNome do evento: " + getNameEvent()
+                +"\nLocal da Festa: " + getPlaceEvent()
+                +"\nNome do palestrante: " + getNameSpeaker()
+                +"\nAssunto da palestra" + getInfo()
+                +"\nComeça as: " + getStartTime()
+                +"\nTermina as:" + getFinalTime()
+                +"\nCapacidade: " + getCapacity());
+
+    }
+
 }

@@ -17,6 +17,9 @@ public class Menu {
 
 
     public void menuOpcao()  {
+
+            System.out.println("Bem vindo ao sistema de eventos");
+            System.out.println("Evento Marcado para os proximos dias");
         do{
             List<RegisterEvents> events = new ArrayList<>();
             File arquivo = new File("Events/src/events.data");
@@ -34,8 +37,6 @@ public class Menu {
                 throw new RuntimeException(e);
             }
 
-            System.out.println("Bem vindo ao sistema de eventos");
-            System.out.println("Evento Marcado para os proximos dias");
             System.out.println("Menu");
             System.out.println("1 - Cadastrar");
             System.out.println("2 - Cadastrar evento");
@@ -79,6 +80,7 @@ public class Menu {
                                     eventsWedding.getNameChurch(),
                                     eventsWedding.getNameChurch()
                             ));
+                            eventsWedding.RegisterSuccess();
                         } else if (optionEvent == 3) {
                             eventsLecture.RegisterEventsLecture();
                             events.add(new EventsLecture(
@@ -90,6 +92,7 @@ public class Menu {
                                     eventsLecture.getCapacity(),
                                     eventsLecture.getNameSpeaker())
                             );
+                            eventsLecture.RegisterSuccess();
                         } else {
                             System.out.println("Digite uma opção valida");
                         }

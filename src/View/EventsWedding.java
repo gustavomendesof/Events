@@ -49,22 +49,28 @@ public class EventsWedding extends RegisterEvents {
     public void RegisterEventsWedding(){
 
         System.out.println("Digite o Nome da igreja:");
-        setNameChurch(sc.next());
+        setNameChurch(sc.nextLine());
 
         System.out.println("Digite o local da igreja:");
-        setPlaceChurch(sc.next());
+        setPlaceChurch(sc.nextLine());
 
         System.out.println("Digite o nome da noiva:");
-        setNameFiancee(sc.next());
+        setNameFiancee(sc.nextLine());
 
-        System.out.println("Digite o nome do noivo");
-        setNameEngaged(sc.next());
+        System.out.println("Digite o nome do noivo:");
+        setNameEngaged(sc.nextLine());
+
+        System.out.println("Digite o local da festa:");
+        setPlaceEvent(sc.nextLine());
 
         System.out.println("Digite o horario de inicio do Casamento: ");
-        setStartTime(sc.next());
+        setStartTime(sc.nextLine());
 
         System.out.println("Digite o horario final do casamento: ");
-        setFinalTime(sc.next());
+        setFinalTime(sc.nextLine());
+
+        System.out.println("Digite a capacidade do evento:");
+        setCapacity(sc.nextInt());
 
     }
 
@@ -82,13 +88,13 @@ public class EventsWedding extends RegisterEvents {
 
     public void RegisterSuccess(){
         System.out.println("Evento Registrado com sucesso"
-                +"Nome do evento: " + getNameEvent()
+                +"\nNome do evento: " + getNameEvent()
                 +"\nNome da igreja: " +  getNameChurch()
                 +"\nLocal da igreja: " + getPlaceChurch()
                 +"\nNome da noiva: " + getNameFiancee()
                 +"\nNome do noivo: " + getNameEngaged()
                 +"\nLocal da Festa: " + getPlaceEvent()
-                +"\nCapacidade: " + getCapacity()
+                +"\nComeça as: " + getStartTime()
                 +"\nTermina as:" + getFinalTime()
                 +"\nCapacidade: " + getCapacity());
 
