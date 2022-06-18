@@ -3,6 +3,17 @@ package View;
 public class EventsWedding extends RegisterEvents {
     private String nameFiancee, nameEngaged, nameChurch, placeChurch;
 
+    public EventsWedding() {}
+
+    public EventsWedding(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String nameFiancee, String nameEngaged, String nameChurch, String placeChurch) {
+        super(nameEvent, placeEvent, info, startTime, finalTime, capacity);
+        this.nameFiancee = nameFiancee;
+        this.nameEngaged = nameEngaged;
+        this.nameChurch = nameChurch;
+        this.placeChurch = placeChurch;
+
+    }
+
     public String getNameFiancee() {
         return nameFiancee;
     }
@@ -36,32 +47,36 @@ public class EventsWedding extends RegisterEvents {
     }
 
     public void RegisterEventsWedding(){
-        System.out.println("Digite o nome do Evento:");
-        setNameEvent(sc.nextLine());
 
         System.out.println("Digite o Nome da igreja:");
-        setNameChurch(sc.nextLine());
+        setNameChurch(sc.next());
 
         System.out.println("Digite o local da igreja:");
-        setPlaceChurch(sc.nextLine());
+        setPlaceChurch(sc.next());
 
         System.out.println("Digite o nome da noiva:");
-        setNameFiancee(sc.nextLine());
+        setNameFiancee(sc.next());
 
         System.out.println("Digite o nome do noivo");
-        setNameEngaged(sc.nextLine());
-
-        System.out.println("Digite o local da Festa: ");
-        setPlaceEvent(sc.nextLine());
-
-        System.out.println("Digite a capacidade da Festa");
-        setCapacity(sc.nextInt());
+        setNameEngaged(sc.next());
 
         System.out.println("Digite o horario de inicio do Casamento: ");
-        setStartTime(sc.nextDouble());
+        setStartTime(sc.next());
 
         System.out.println("Digite o horario final do casamento: ");
-        setFinalTime(sc.nextDouble());
+        setFinalTime(sc.next());
+
+    }
+
+    @Override
+    public String toString() {
+        return "Casamento|"
+                +"Nome da noiva: " + getNameFiancee()
+                +"| Nome do noivo: " + getNameEngaged()
+                +"| Nome da igreja: " + getNameChurch()
+                +"| Local da igreja: " + getPlaceChurch()
+                +"| Horario de inicio: " + getFinalTime()
+                +"| Horario do fim: " + getStartTime();
 
     }
 }

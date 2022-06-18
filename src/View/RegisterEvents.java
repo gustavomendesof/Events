@@ -5,9 +5,19 @@ import java.util.Scanner;
 public abstract class RegisterEvents {
     Scanner sc = new Scanner(System.in);
 
-    private String nameEvent, placeEvent, info;
-    private double startTime, finalTime;
+    private String nameEvent, placeEvent, info, startTime, finalTime;
     private int capacity;
+
+    public RegisterEvents() {}
+
+    public RegisterEvents(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity) {
+        this.nameEvent = nameEvent;
+        this.placeEvent = placeEvent;
+        this.info = info;
+        this.startTime = startTime;
+        this.finalTime = finalTime;
+        this.capacity = capacity;
+    }
 
     public String getNameEvent() {
         return nameEvent;
@@ -33,19 +43,19 @@ public abstract class RegisterEvents {
         this.placeEvent = placeEvent;
     }
 
-    public double getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(double startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public double getFinalTime() {
+    public String getFinalTime() {
         return finalTime;
     }
 
-    public void setFinalTime(double finalTime) {
+    public void setFinalTime(String finalTime) {
         this.finalTime = finalTime;
     }
 
