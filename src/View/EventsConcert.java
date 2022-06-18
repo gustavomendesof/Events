@@ -1,12 +1,14 @@
 package View;
 
+import java.util.List;
+
 public class EventsConcert extends RegisterEvents {
     private String Singer;
 
     public EventsConcert() {}
 
-    public EventsConcert(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String singer) {
-        super(nameEvent, placeEvent, info, startTime, finalTime, capacity);
+    public EventsConcert(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String singer, List<String> presentList) {
+        super(nameEvent, placeEvent, info, startTime, finalTime, capacity, presentList);
         Singer = singer;
     }
     public String getSinger() {

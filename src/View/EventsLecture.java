@@ -1,10 +1,12 @@
 package View;
 
+import java.util.List;
+
 public class EventsLecture extends RegisterEvents {
     public EventsLecture() {}
 
-    public EventsLecture(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String nameSpeaker) {
-        super(nameEvent, placeEvent, info, startTime, finalTime, capacity);
+    public EventsLecture(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String nameSpeaker, List<String> presentList) {
+        super(nameEvent, placeEvent, info, startTime, finalTime, capacity, presentList);
         this.nameSpeaker = nameSpeaker;
     }
 

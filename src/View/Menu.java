@@ -12,16 +12,14 @@ public class Menu {
     EventsConcert eventsConcert = new EventsConcert();
     EventsWedding eventsWedding = new EventsWedding();
     EventsLecture eventsLecture = new EventsLecture();
-    PresentList presentList = new PresentList();
     Notification notification = new Notification();
 
 
     public void menuOpcao()  {
-
-            System.out.println("Bem vindo ao sistema de eventos");
-            System.out.println("Evento Marcado para os proximos dias");
         do{
             List<RegisterEvents> events = new ArrayList<>();
+            List<String> presentList = new ArrayList<>();
+
             File arquivo = new File("Events/src/events.data");
 
             try {
@@ -37,9 +35,13 @@ public class Menu {
                 throw new RuntimeException(e);
             }
 
+            System.out.println("Bem vindo ao sistema de eventos");
+            System.out.println("Evento Marcado para os proximos dias");
             System.out.println("Menu");
             System.out.println("1 - Cadastrar");
             System.out.println("2 - Cadastrar evento");
+            System.out.println("3 - Marcar Presenca");
+            System.out.println("0 - Encerrar");
             opcao = sc.nextInt();
             switch (opcao) {
                 case 1:
@@ -64,7 +66,8 @@ public class Menu {
                                     eventsConcert.getStartTime(),
                                     eventsConcert.getFinalTime(),
                                     eventsConcert.getCapacity(),
-                                    eventsConcert.getSinger()
+                                    eventsConcert.getSinger(),
+                                    presentList
                             ));
                         } else if (optionEvent == 2) {
                             eventsWedding.RegisterEventsWedding();
@@ -78,7 +81,8 @@ public class Menu {
                                     eventsWedding.getNameFiancee(),
                                     eventsWedding.getNameEngaged(),
                                     eventsWedding.getNameChurch(),
-                                    eventsWedding.getNameChurch()
+                                    eventsWedding.getNameChurch(),
+                                    presentList
                             ));
                             eventsWedding.RegisterSuccess();
                         } else if (optionEvent == 3) {
@@ -90,28 +94,43 @@ public class Menu {
                                     eventsLecture.getStartTime(),
                                     eventsLecture.getFinalTime(),
                                     eventsLecture.getCapacity(),
-                                    eventsLecture.getNameSpeaker())
-                            );
+                                    eventsLecture.getNameSpeaker(),
+                                    presentList
+                            ));
                             eventsLecture.RegisterSuccess();
-                        } else {
-                            System.out.println("Digite uma opção valida");
+                        } else if(optionEvent != 0) {
+                            System.out.println("Digite uma opcao valida");
                         }
                         notification.notificationEvents();
                     }while (optionEvent != 0);
+                    try {
+                        FileWriter fileWriter = new FileWriter(arquivo,false);
+                        PrintWriter printWriter = new PrintWriter(fileWriter);
+                        printWriter.println(events);
+                        printWriter.flush();
+                        printWriter.close();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 case 3:
+                    try {
+                        String line = "";
+                        FileReader fileReader = new FileReader(arquivo);
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+                        while ((line = bufferedReader.readLine() ) != null) {
+                            System.out.println(line);
+                        }
+                        fileReader.close();
+                        bufferedReader.close();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    break;
+                case 0:
                     break;
                 default:
                     System.out.println("Numero errado");
                     break;
-            }
-            try {
-                FileWriter fileWriter = new FileWriter(arquivo,false);
-                PrintWriter printWriter = new PrintWriter(fileWriter);
-                printWriter.println(events);
-                printWriter.flush();
-                printWriter.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
             }
         }while(opcao !=0);
     }

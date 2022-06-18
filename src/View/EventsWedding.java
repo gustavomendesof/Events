@@ -1,12 +1,14 @@
 package View;
 
+import java.util.List;
+
 public class EventsWedding extends RegisterEvents {
     private String nameFiancee, nameEngaged, nameChurch, placeChurch;
 
     public EventsWedding() {}
 
-    public EventsWedding(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String nameFiancee, String nameEngaged, String nameChurch, String placeChurch) {
-        super(nameEvent, placeEvent, info, startTime, finalTime, capacity);
+    public EventsWedding(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, String nameFiancee, String nameEngaged, String nameChurch, String placeChurch, List<String> presentList) {
+        super(nameEvent, placeEvent, info, startTime, finalTime, capacity, presentList);
         this.nameFiancee = nameFiancee;
         this.nameEngaged = nameEngaged;
         this.nameChurch = nameChurch;
@@ -57,20 +59,14 @@ public class EventsWedding extends RegisterEvents {
         System.out.println("Digite o nome da noiva:");
         setNameFiancee(sc.nextLine());
 
-        System.out.println("Digite o nome do noivo:");
+        System.out.println("Digite o nome do noivo");
         setNameEngaged(sc.nextLine());
 
-        System.out.println("Digite o local da festa:");
-        setPlaceEvent(sc.nextLine());
-
         System.out.println("Digite o horario de inicio do Casamento: ");
-        setStartTime(sc.nextLine());
+        setStartTime(sc.next());
 
         System.out.println("Digite o horario final do casamento: ");
-        setFinalTime(sc.nextLine());
-
-        System.out.println("Digite a capacidade do evento:");
-        setCapacity(sc.nextInt());
+        setFinalTime(sc.next());
 
     }
 
