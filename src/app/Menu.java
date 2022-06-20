@@ -66,10 +66,9 @@ public class Menu {
                                     eventsConcert.getSinger(),
                                     presentList
                             ));
-                            
-                            eventsConcert.RegisterSuccess();
+
                             /*Metodo para retorno de confirmação de registro*/
-                            eventsLecture.RegisterSuccess();
+                            eventsConcert.RegisterSuccess();
                         } else if (optionEvent == 2) {
                             /*Chamada do metodo RegisterEventsWedding da classe eventsWedding, responsalvel pelo cadastro do evento de casamentos e retorno de registrado com sucesso*/
                             eventsWedding.RegisterEventsWedding();
