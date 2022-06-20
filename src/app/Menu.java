@@ -23,11 +23,10 @@ public class Menu {
             List<String> presentList = new ArrayList<>();
 
             /*Local do arquivo events.data*/
-            File arquivo = new File("Events/src/events.data");
+            File arquivo = new File("src/events.data");
 
 
-            System.out.println("Bem vindo ao sistema de eventos");
-            System.out.println("Evento Marcado para os proximos dias");
+            System.out.println("Bem vindo ao sistema POA-Eventos");
             System.out.println("Menu");
             System.out.println("1 - Cadastrar");
             System.out.println("2 - Cadastrar evento");
