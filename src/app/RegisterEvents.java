@@ -1,4 +1,4 @@
-package View;
+package app;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,22 +6,27 @@ import java.util.Scanner;
 public abstract class RegisterEvents {
     Scanner sc = new Scanner(System.in);
 
-    private String nameEvent, placeEvent, info, startTime, finalTime;
+    /*Declaração dos atributos da classe*/
+    private String nameEvent, placeEvent, info, startTime, finalTime, date;
     private List <String>presentList;
     private int capacity;
 
     public RegisterEvents() {}
 
-    public RegisterEvents(String nameEvent, String placeEvent, String info, String startTime, String finalTime, int capacity, List <String> presentList) {
+    /*Concstrutor da classe*/
+    public RegisterEvents(String nameEvent, String placeEvent, String info, String startTime, String finalTime,String date, int capacity, List <String> presentList) {
         this.nameEvent = nameEvent;
         this.placeEvent = placeEvent;
         this.info = info;
         this.startTime = startTime;
         this.finalTime = finalTime;
+        this.date = date;
         this.capacity = capacity;
         this.presentList = presentList;
+        
     }
 
+    /*Getter e Setters dos atributos da classe RegisterEvents*/
     public String getNameEvent() {
         return nameEvent;
     }
@@ -70,4 +75,11 @@ public abstract class RegisterEvents {
         this.capacity = capacity;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

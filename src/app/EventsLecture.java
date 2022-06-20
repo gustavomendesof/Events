@@ -1,9 +1,20 @@
 package app;
 
-public class EventsLecture extends CadastrarEvents{
+import java.util.List;
 
+public class EventsLecture extends RegisterEvents {
+    public EventsLecture() {}
+
+    /*Contrutor da classe*/
+    public EventsLecture(String nameEvent, String placeEvent, String info, String startTime, String finalTime, String date, int capacity, String nameSpeaker, List<String> presentList) {
+        super(nameEvent, placeEvent, info, startTime, finalTime, date, capacity, presentList);
+        this.nameSpeaker = nameSpeaker;
+    }
+    
+    /*Declara��o dos atributos da classe*/
     private String nameSpeaker;
-
+    
+    /*Getter e Setter da classe*/
     public String getNameSpeaker() {
         return nameSpeaker;
     }
@@ -11,7 +22,8 @@ public class EventsLecture extends CadastrarEvents{
     public void setNameSpeaker(String nameSpeaker) {
         this.nameSpeaker = nameSpeaker;
     }
-
+    
+    /*Metodo para o registro do evento de Palestra*/
     public void RegisterEventsLecture() {
         System.out.println("Digite o nome da Palestra:");
         setNameEvent(sc.nextLine());
@@ -25,24 +37,44 @@ public class EventsLecture extends CadastrarEvents{
         System.out.println("Digite o assunto da palestra:");
         setInfo(sc.nextLine());
 
+        System.out.println("Digite da data do evento");
+        setDate(sc.nextLine());
+
+        System.out.println("Digite o horario de inicio da palestra:");
+        setStartTime(sc.nextLine());
+
+        System.out.println("Digite o horario final da palestra:");
+        setFinalTime(sc.nextLine());
+
         System.out.println("Digite a capacidade de pessoas:");
         setCapacity(sc.nextInt());
 
-        System.out.println("Digite o horario de inicio da palestra:");
-        setStartTime(sc.nextDouble());
-
-        System.out.println("Digite o horario final da palestra:");
-        setFinalTime(sc.nextDouble());
+        sc.nextLine();
     }
 
     @Override
     public String toString() {
-        return "Palestra: " + getNameEvent()
-                +"\nPalestrante: " + getNameSpeaker()
-                +"\nAssunto da Palestra: " + getInfo()
-                +"\nLocal da Palestra: " + getPlaceEvent()
-                +"\nComeça as: " + getStartTime()
-                +"\nTermina as:" + getFinalTime()
-                +"\n Capacidade: " + getCapacity();
+        return "Palestra "
+                +"| Palestrante: " + getNameSpeaker()
+                +"| Assunto da palestra: " + getInfo()
+                +"| Local da palestra: " +getPlaceEvent()
+                +"| Data da palestra:" + getDate()
+                +"| Comeca as: " + getStartTime()
+                +"| Termina as:" + getFinalTime()
+                +"| Capacidade: " + getCapacity();
+    }
+
+    
+    /*Metodo para o retorno de confirma��o de registro*/
+    public void RegisterSuccess(){
+        System.out.println("Palestra "
+                +"| Palestrante: " + getNameSpeaker()
+                +"| Assunto da Palestra: " + getInfo()
+                +"| Local da Palestra: " +getPlaceEvent()
+                +"| Data do evento: " + getDate()
+                +"| Comeca as: " + getStartTime()
+                +"| Termina as:" + getFinalTime()
+                +"| Capacidade: " + getCapacity()
+        		+"\nEvento Registrado com sucesso");
     }
 }

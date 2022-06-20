@@ -1,14 +1,17 @@
-package View;
+package app;
 
 import java.util.Scanner;
 
+/*Classe para Registro de usuario*/
 public class RegisterUser {
+	/*Istanciamento da classe scanner*/
     Scanner sc = new Scanner(System.in);
-
+    
+    /*Declaração dos atributos da classe*/
     private String user;
     private int password, phone, cpf;
 
-
+    /*Getter e Setter da classe*/
     public String getUser() {
         return user;
     }
@@ -41,13 +44,14 @@ public class RegisterUser {
         this.cpf = cpf;
     }
 
-
+    /*Metodo para o registro do usuario*/
     public void CadastrarUser(){
         System.out.println("Digite seu usuario: ");
         setUser(sc.nextLine());
 
         System.out.println("Digite uma senha de ate 4 numeros: ");
         setPassword(sc.nextInt());
+        
 
         System.out.println("Digite seu telefone: ");
         setPhone(sc.nextInt());
@@ -55,9 +59,11 @@ public class RegisterUser {
         System.out.println("Digite seu cpf sem caracteres especiais: ");
         setCpf(sc.nextInt());
     }
-
+    
+    
+    /*Metodo para o retorno de confirmação de registro*/
     public void RegisterSuccess(){
-        System.out.println("Evento Registrado com sucesso"
+        System.out.println("Registrado com sucesso"
                 +"\n Nome de usuario: " + getUser()
                 +"\n Senha: " + getPassword()
                 +"\n Telefone: " + getPhone()
