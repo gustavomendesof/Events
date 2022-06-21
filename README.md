@@ -14,7 +14,7 @@ Sistema de Eventos
 - Na estrutura de software do projeto deve constar no mínimo uma classe abstrata e no mínimo 2 métodos virtuais (não necessariamente juntos);
 
 # Diagram de classe - UML
-![UML](UML.png)
+![UML](Uml.drawio)
 
 # Sprint
 ![Sprint](Sprint.png)
