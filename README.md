@@ -12,3 +12,9 @@ Sistema de Eventos
 - O sistema também deve informar os eventos que já ocorreram;
 - As informações dos eventos devem ser salvas em um arquivo de texto chamado events.data. Toda vez que o programa for aberto, deve carregar os eventos a partir da leitura deste arquivo;
 - Na estrutura de software do projeto deve constar no mínimo uma classe abstrata e no mínimo 2 métodos virtuais (não necessariamente juntos);
+
+# Diagram de classe - UML
+![UML](UML.png)
+
+# Sprint
+![Sprint](Sprint.png)
